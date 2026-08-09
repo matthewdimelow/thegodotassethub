@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <rect width="800" height="600" fill="#06070c"/>
+  <circle cx="320" cy="300" r="70" fill="#ff6b2c"/>
+  <circle cx="480" cy="300" r="70" fill="#5dffb1"/>
+  <circle cx="400" cy="220" r="50" fill="#7ec8ff"/>
+  <text x="40" y="70" fill="#d5deea" font-family="monospace" font-size="22">HUGGING FACE</text>
+</svg>

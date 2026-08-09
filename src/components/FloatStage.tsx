@@ -110,8 +110,8 @@ export default function FloatStage({
       const group = new THREE.Group();
       scene.add(group);
 
-      const lime = new THREE.Color("#c8f542");
-      const coral = new THREE.Color("#ff5a3c");
+      const lime = new THREE.Color("#5dffb1");
+      const coral = new THREE.Color("#ff6b2c");
       const meshes: THREE.Mesh[] = [];
 
       const buildPrimitive = () => {
@@ -179,14 +179,14 @@ export default function FloatStage({
       }
 
       scene.add(new THREE.AmbientLight(0xffffff, 0.7));
-      scene.add(new THREE.HemisphereLight(0xc8f542, 0x1a1520, 0.65));
+      scene.add(new THREE.HemisphereLight(0x5dffb1, 0x1a1520, 0.65));
       const key = new THREE.DirectionalLight(0xffffff, 2.6);
       key.position.set(2.8, 3.6, 4.2);
       scene.add(key);
-      const fillA = new THREE.PointLight(0xc8f542, 18, 16);
+      const fillA = new THREE.PointLight(0x5dffb1, 18, 16);
       fillA.position.set(-2.4, 1, 2);
       scene.add(fillA);
-      const fillB = new THREE.PointLight(0xff5a3c, 14, 16);
+      const fillB = new THREE.PointLight(0xff6b2c, 14, 16);
       fillB.position.set(2.4, 0.2, 1.4);
       scene.add(fillB);
       const rim = new THREE.DirectionalLight(0xffffff, 1.1);

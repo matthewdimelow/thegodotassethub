@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <rect width="800" height="600" fill="#06070c"/>
+  <rect x="180" y="280" width="28" height="80" fill="#5dffb1"/>
+  <rect x="230" y="240" width="28" height="160" fill="#7ec8ff"/>
+  <rect x="280" y="200" width="28" height="240" fill="#ff6b2c"/>
+  <rect x="330" y="230" width="28" height="180" fill="#5dffb1"/>
+  <rect x="380" y="260" width="28" height="120" fill="#7ec8ff"/>
+  <rect x="430" y="210" width="28" height="220" fill="#ff6b2c"/>
+  <rect x="480" y="250" width="28" height="140" fill="#5dffb1"/>
+  <rect x="530" y="270" width="28" height="100" fill="#7ec8ff"/>
+  <text x="40" y="70" fill="#d5deea" font-family="monospace" font-size="22">WHISPER · SPEECH</text>
+</svg>

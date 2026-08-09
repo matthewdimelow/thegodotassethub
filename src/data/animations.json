@@ -9,7 +9,7 @@
     "license": "Adobe Mixamo terms (free with account)",
     "godotVersion": "Any (import FBX/glTF)",
     "summary": "Huge free library of auto-rigged characters and mocap clips. Download FBX, convert/import into Godot for prototyping fast.",
-    "preview": "/previews/anim-mixamo.svg"
+    "preview": "/previews/mixamo.png"
   },
   {
     "id": "accurig",
@@ -21,7 +21,7 @@
     "license": "Free AccuRIG terms",
     "godotVersion": "Any (export then import)",
     "summary": "Free auto-rigging tool for humanoid meshes — get a usable skeleton without a full DCC pipeline.",
-    "preview": "/previews/anim-accurig.svg"
+    "preview": "/previews/accurig.jpg"
   },
   {
     "id": "cascadeur",
@@ -33,7 +33,7 @@
     "license": "Cascadeur Free plan",
     "godotVersion": "Any (export FBX/Collada)",
     "summary": "Physics-assisted keyframe animation. The free plan is solid for indie Godot characters and cinematic posing.",
-    "preview": "/previews/anim-cascadeur.svg"
+    "preview": "/previews/cascadeur.jpg"
   },
   {
     "id": "blender",
@@ -45,7 +45,7 @@
     "license": "GPL (Blender) · your files are yours",
     "godotVersion": "Any (glTF recommended)",
     "summary": "The free full-stack DCC for rigs, keyframes, Grease Pencil 2D, and glTF export straight into Godot.",
-    "preview": "/previews/anim-blender.svg"
+    "preview": "/previews/blender.png"
   },
   {
     "id": "godot-anim-docs",
@@ -57,7 +57,7 @@
     "license": "CC-BY 3.0 (docs)",
     "godotVersion": "4.x",
     "summary": "Official tutorials for AnimationPlayer, AnimationTree, cutouts, and importing animated scenes.",
-    "preview": "/previews/anim-godot.svg"
+    "preview": "/previews/godot-docs.webp"
   },
   {
     "id": "opengameart-anim",
@@ -69,7 +69,7 @@
     "license": "Various free licenses",
     "godotVersion": "Any",
     "summary": "Filterable free animated sprites and 3D clips. Always double-check the license on each pack.",
-    "preview": "/previews/anim-oga.svg"
+    "preview": "/previews/opengameart.png"
   },
   {
     "id": "kenney-animated",
@@ -81,7 +81,7 @@
     "license": "CC0",
     "godotVersion": "Any",
     "summary": "CC0 animated packs from Kenney — drop into Godot with zero licensing stress.",
-    "preview": "/previews/anim-kenney.svg"
+    "preview": "/previews/kenney.png"
   },
   {
     "id": "quaternius-animated",
@@ -93,6 +93,6 @@
     "license": "CC0",
     "godotVersion": "Any",
     "summary": "Stylized free 3D characters — many include idle/walk/run clips ready for Godot prototypes.",
-    "preview": "/previews/anim-quaternius.svg"
+    "preview": "/previews/quaternius.jpg"
   }
 ]

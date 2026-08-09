@@ -54,9 +54,9 @@ export default function HeroStage({ className }: HeroStageProps) {
       const root = new THREE.Group();
       scene.add(root);
 
-      const lime = new THREE.Color("#c8f542");
-      const coral = new THREE.Color("#ff5a3c");
-      const steel = new THREE.Color("#9aa3b8");
+      const lime = new THREE.Color("#5dffb1");
+      const coral = new THREE.Color("#ff6b2c");
+      const steel = new THREE.Color("#7ec8ff");
 
       const gemMat = new THREE.MeshPhysicalMaterial({
         color: lime,
@@ -180,7 +180,7 @@ export default function HeroStage({ className }: HeroStageProps) {
       scene.add(particles);
 
       // Ground grid
-      const grid = new THREE.GridHelper(18, 28, 0xc8f542, 0x2a3140);
+      const grid = new THREE.GridHelper(18, 28, 0x5dffb1, 0x1a2433);
       grid.position.y = -1.8;
       const gridMats = Array.isArray(grid.material) ? grid.material : [grid.material];
       gridMats.forEach((mat) => {
@@ -193,10 +193,10 @@ export default function HeroStage({ className }: HeroStageProps) {
       key.position.set(3.5, 5, 5);
       scene.add(key);
       scene.add(new THREE.AmbientLight(0xffffff, 0.32));
-      const fill = new THREE.PointLight(0xc8f542, 22, 14);
+      const fill = new THREE.PointLight(0x5dffb1, 22, 14);
       fill.position.set(-3.2, 1.2, 2.2);
       scene.add(fill);
-      const rim = new THREE.PointLight(0xff5a3c, 20, 14);
+      const rim = new THREE.PointLight(0xff6b2c, 20, 14);
       rim.position.set(3.4, -0.8, -2.2);
       scene.add(rim);
 

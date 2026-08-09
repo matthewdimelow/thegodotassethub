@@ -1,0 +1,40 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import MediaTile from "../../components/MediaTile.astro";
+import assets from "../../data/assets.json";
+import type { HubAsset } from "../../data/types";
+
+const items = (assets as HubAsset[]).filter((a) => a.id === "dimeplayer");
+---
+
+<BaseLayout
+  title="Our Tools"
+  description="Tools from AIGameDevHub — starting with DimePlayer for real video playback in Godot."
+>
+  <section class="container page-head">
+    <p class="mono eyebrow" data-reveal>Ours · Free</p>
+    <h1 data-reveal>Our tools</h1>
+    <p data-reveal>
+      Small Godot utilities we ship ourselves. Shelf starts with one — more drops when they’re ready.
+    </p>
+  </section>
+
+  <section class="container" style="padding-bottom: 4rem">
+    <div class="media-grid" id="tools-grid">
+      {
+        items.map((item, i) => (
+          <MediaTile
+            href={`/tools/${item.id}`}
+            title={item.title}
+            summary={item.summary}
+            preview={item.preview}
+            tags={[item.godotVersion, "free", ...item.tags.slice(0, 1)]}
+            badge="Ours"
+            badgeTone="coral"
+            delay={i * 70}
+          />
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>

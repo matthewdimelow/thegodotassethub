@@ -1,0 +1,162 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import RedditFeed from "../components/RedditFeed";
+---
+
+<BaseLayout
+  title="Community"
+  description="Live feed from r/aigamedev — AI game-dev demos, workflows, tools, and discussion."
+>
+  <section class="container page-head community-head">
+    <p class="mono eyebrow" data-reveal>Signal from Reddit</p>
+    <h1 data-reveal>
+      r/<span class="brand-accent">aigamedev</span>
+    </h1>
+    <p data-reveal>
+      A live slice of the AI game-dev subreddit — projects, workflows, tools, and questions from
+      makers shipping with generative AI. Jump into the thread on Reddit anytime.
+    </p>
+    <div class="hero-ctas" data-reveal>
+      <a
+        class="btn btn-lime"
+        href="https://www.reddit.com/r/aigamedev/"
+        target="_blank"
+        rel="noopener noreferrer">Join the subreddit</a
+      >
+      <a class="btn btn-ghost" href="/coding">Browse coding tools</a>
+    </div>
+  </section>
+
+  <section class="container community-feed-wrap">
+    <RedditFeed client:load />
+  </section>
+</BaseLayout>
+
+<style>
+  .community-head {
+    padding-bottom: 1.5rem;
+  }
+
+  .community-feed-wrap {
+    padding-bottom: 5rem;
+  }
+
+  :global(.reddit-feed) {
+    display: grid;
+    gap: 1.25rem;
+  }
+
+  :global(.reddit-feed-bar) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  :global(.reddit-feed-meta) {
+    margin: 0.35rem 0 0;
+    color: var(--steel);
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+  }
+
+  :global(.reddit-list) {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.65rem;
+  }
+
+  :global(.reddit-item) {
+    display: block;
+    padding: 1.1rem 1.15rem;
+    border: 1px solid var(--line);
+    background:
+      linear-gradient(135deg, rgba(93, 255, 177, 0.04), transparent 45%),
+      rgba(15, 20, 28, 0.55);
+    transition:
+      border-color 160ms ease,
+      transform 160ms ease,
+      background 160ms ease;
+    animation: reddit-in 420ms ease both;
+  }
+
+  :global(.reddit-item:hover) {
+    border-color: rgba(93, 255, 177, 0.45);
+    transform: translateY(-2px);
+    background:
+      linear-gradient(135deg, rgba(93, 255, 177, 0.08), transparent 50%),
+      rgba(15, 20, 28, 0.75);
+  }
+
+  :global(.reddit-item-top) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin-bottom: 0.55rem;
+    min-height: 1.25rem;
+  }
+
+  :global(.reddit-item h3) {
+    margin: 0;
+    font-size: clamp(1.05rem, 2vw, 1.25rem);
+    letter-spacing: -0.03em;
+    line-height: 1.25;
+    color: var(--white);
+  }
+
+  :global(.reddit-author),
+  :global(.reddit-time) {
+    color: var(--steel);
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+  }
+
+  :global(.reddit-author) {
+    margin: 0.55rem 0 0;
+  }
+
+  :global(.reddit-skel) {
+    min-height: 5.5rem;
+    background: linear-gradient(
+      90deg,
+      rgba(15, 20, 28, 0.8),
+      rgba(93, 255, 177, 0.06),
+      rgba(15, 20, 28, 0.8)
+    );
+    background-size: 200% 100%;
+    animation: reddit-shimmer 1.2s ease-in-out infinite;
+  }
+
+  :global(.reddit-empty) {
+    display: grid;
+    gap: 1rem;
+    padding: 2rem 0;
+    color: var(--steel-bright);
+  }
+
+  @keyframes reddit-in {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  @keyframes reddit-shimmer {
+    0% {
+      background-position: 100% 0;
+    }
+    100% {
+      background-position: -100% 0;
+    }
+  }
+</style>

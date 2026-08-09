@@ -14,7 +14,7 @@
     "title": "Neon Crate Pack",
     "summary": "A tiny stylized crate set with emissive edges — made for quick prototypes and hub demos.",
     "downloadUrl": "",
-    "preview": "/previews/asset-crate.svg",
+    "preview": "/previews/stock/crate-box.jpg",
     "godotVersion": "4.3+",
     "tags": ["3d", "props", "starter"],
     "status": "coming-soon"
@@ -24,7 +24,7 @@
     "title": "Pulse Gem",
     "summary": "Low-poly collectible gem with a soft pulse material setup for Godot 4.",
     "downloadUrl": "",
-    "preview": "/previews/asset-gem.svg",
+    "preview": "/previews/stock/gem-crystal.jpg",
     "godotVersion": "4.3+",
     "tags": ["3d", "collectible", "vfx"],
     "status": "coming-soon"
@@ -34,7 +34,7 @@
     "title": "Infinite Grid Floor",
     "summary": "Simple modular floor tiles with a funky grid albedo — perfect for showcase scenes.",
     "downloadUrl": "",
-    "preview": "/previews/asset-grid.svg",
+    "preview": "/previews/stock/neon-grid.jpg",
     "godotVersion": "4.x",
     "tags": ["3d", "environment"],
     "status": "coming-soon"

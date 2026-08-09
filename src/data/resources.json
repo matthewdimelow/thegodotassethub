@@ -9,7 +9,7 @@
     "license": "Varies by author",
     "godotVersion": "3.x / 4.x",
     "summary": "Huge community gallery of free Godot shaders with copy-paste code and previews.",
-    "preview": "/previews/resource-shaders.svg"
+    "preview": "/previews/godot-shaders.png"
   },
   {
     "id": "kenney-assets",
@@ -25,15 +25,15 @@
   },
   {
     "id": "godot-asset-library",
-    "title": "Godot Asset Library",
+    "title": "Godot Asset Store",
     "author": "Godot Engine",
-    "url": "https://godotengine.org/asset-library/asset",
+    "url": "https://store.godotengine.org/",
     "category": "Plugins",
-    "tags": ["official", "plugins", "tools"],
+    "tags": ["official", "plugins", "tools", "store"],
     "license": "Varies by author",
-    "godotVersion": "3.x / 4.x",
-    "summary": "Official browser for addons, templates, demos, and tools installable from the editor.",
-    "preview": "/previews/resource-library.svg"
+    "godotVersion": "4.x",
+    "summary": "Official Godot Asset Store — browse addons, templates, demos, and tools for your projects.",
+    "preview": "/previews/godot-asset-store.png"
   },
   {
     "id": "gdquest-free",
@@ -69,6 +69,6 @@
     "license": "Various free licenses",
     "godotVersion": "Any",
     "summary": "Long-running free game art and audio hub. Filter carefully by license.",
-    "preview": "/previews/resource-oga.svg"
+    "preview": "/previews/opengameart.png"
   }
 ]

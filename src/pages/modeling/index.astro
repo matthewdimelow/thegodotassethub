@@ -1,0 +1,47 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import FilterBar from "../../components/FilterBar.astro";
+import MediaTile from "../../components/MediaTile.astro";
+import modeling from "../../data/modeling.json";
+import type { Resource } from "../../data/types";
+
+const items = modeling as Resource[];
+const categories = [...new Set(items.map((r) => r.category))].sort();
+---
+
+<BaseLayout
+  title="Modeling"
+  description="Free 3D modeling tools for game developers — Blender, Blockbench, voxels, cleanup, and more."
+>
+  <section class="container page-head">
+    <p class="mono eyebrow" data-reveal>External · Always free</p>
+    <h1 data-reveal>Modeling tools for game makers</h1>
+    <p data-reveal>
+      Free DCCs, voxel editors, character creators, and mesh cleanup — build props and heroes without
+      a license wall. Verify each license before you ship. Hub drops live under{" "}
+      <a href="/tools" style="color: var(--mint)">Our Tools</a>.
+    </p>
+  </section>
+
+  <section class="container" style="padding-bottom: 4rem">
+    <FilterBar categories={categories} target="#modeling-grid" />
+    <div class="media-grid" id="modeling-grid">
+      {
+        items.map((item, i) => (
+          <div data-category={[item.category, ...item.tags].join(",")}>
+            <MediaTile
+              href={`/modeling/${item.id}`}
+              title={item.title}
+              summary={item.summary}
+              preview={item.preview}
+              tags={[item.category, item.license]}
+              badge="Free"
+              badgeTone="coral"
+              delay={i * 70}
+            />
+          </div>
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>

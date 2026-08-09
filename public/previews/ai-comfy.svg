@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <rect width="800" height="600" fill="#0f141c"/>
+  <rect x="120" y="160" width="140" height="90" rx="10" fill="#5dffb1"/>
+  <rect x="330" y="160" width="140" height="90" rx="10" fill="#7ec8ff"/>
+  <rect x="540" y="160" width="140" height="90" rx="10" fill="#ff6b2c"/>
+  <path d="M260 205 H330 M470 205 H540 M400 250 V340" stroke="#d5deea" stroke-width="4"/>
+  <rect x="330" y="340" width="140" height="90" rx="10" fill="#5dffb1" opacity="0.7"/>
+  <text x="40" y="70" fill="#d5deea" font-family="monospace" font-size="22">COMFYUI · NODES</text>
+</svg>

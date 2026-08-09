@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <rect width="800" height="600" fill="#0f141c"/>
+  <rect x="160" y="150" width="480" height="300" rx="18" stroke="#5dffb1" stroke-width="4" fill="#06070c"/>
+  <rect x="200" y="200" width="280" height="18" rx="4" fill="#d5deea"/>
+  <rect x="200" y="240" width="360" height="12" rx="4" fill="#8a96a8"/>
+  <rect x="200" y="270" width="300" height="12" rx="4" fill="#8a96a8"/>
+  <circle cx="560" cy="360" r="28" fill="#ff6b2c"/>
+  <text x="40" y="70" fill="#d5deea" font-family="monospace" font-size="22">LM STUDIO</text>
+</svg>

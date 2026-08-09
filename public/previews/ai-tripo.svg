@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <rect width="800" height="600" fill="#0f141c"/>
+  <polygon points="400,140 560,420 240,420" fill="none" stroke="#5dffb1" stroke-width="8"/>
+  <polygon points="400,200 500,390 300,390" fill="#ff6b2c" opacity="0.85"/>
+  <text x="40" y="70" fill="#d5deea" font-family="monospace" font-size="22">TRIPOSR · IMAGE’3D</text>
+</svg>

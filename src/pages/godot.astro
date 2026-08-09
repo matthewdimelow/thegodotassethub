@@ -1,0 +1,421 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import FloatStage from "../components/FloatStage";
+
+const reasons = [
+  {
+    title: "Free. Forever.",
+    body: "No royalties. No seat licenses. No “pro tier” locked behind a wall. Download Godot and ship.",
+  },
+  {
+    title: "Truly open source",
+    body: "MIT licensed engine. Peek under the hood, fix bugs, contribute features, own your toolchain.",
+  },
+  {
+    title: "Built by humans who make games",
+    body: "A community-driven project that moves because creators care — not because a boardroom said so.",
+  },
+  {
+    title: "One editor, 2D + 3D",
+    body: "Tight scene workflow, AnimationTree, shaders, TileMaps, GDScript that feels made for games.",
+  },
+  {
+    title: "Exports that don’t hate you",
+    body: "Desktop, mobile, web, consoles via community ports — ship where your players are.",
+  },
+  {
+    title: "Deserves more love",
+    body: "Every free tool on this hub gets sharper when more people build in Godot. That’s the point.",
+  },
+];
+
+const links = [
+  {
+    href: "https://godotengine.org/download",
+    label: "Download Godot",
+    meta: "Official",
+    external: true,
+  },
+  {
+    href: "https://docs.godotengine.org/",
+    label: "Read the docs",
+    meta: "Learn",
+    external: true,
+  },
+  {
+    href: "https://store.godotengine.org/",
+    label: "Asset Store",
+    meta: "Browse",
+    external: true,
+  },
+  {
+    href: "/resources",
+    label: "Hub resources",
+    meta: "Curated",
+    external: false,
+  },
+  {
+    href: "/coding",
+    label: "Coding tools",
+    meta: "AI + code",
+    external: false,
+  },
+  {
+    href: "/modeling",
+    label: "Modeling tools",
+    meta: "3D",
+    external: false,
+  },
+  {
+    href: "/animations",
+    label: "Animation tools",
+    meta: "Motion",
+    external: false,
+  },
+];
+---
+
+<BaseLayout
+  title="Godot"
+  description="Godot is free, open source, and deserves more love — why we build AIGameDevHub around it."
+>
+  <section class="godot-hero">
+    <div class="godot-hero-stage" aria-hidden="true">
+      <FloatStage client:load modelUrl="/models/godot-logo.glb" />
+      <div class="godot-hero-veil"></div>
+    </div>
+    <div class="container godot-hero-copy">
+      <p class="mono eyebrow hero-anim" style="animation-delay: 80ms">Free · Open source · MIT</p>
+      <h1 class="hero-anim" style="animation-delay: 160ms">
+        Godot deserves<br /><span class="brand-accent">more love</span>
+      </h1>
+      <p class="godot-lead hero-anim" style="animation-delay: 260ms">
+        A complete free game engine — no royalties, no gatekeeping, just makers helping makers.
+        This hub exists because Godot should be impossible to ignore.
+      </p>
+      <div class="hero-ctas hero-anim" style="animation-delay: 360ms">
+        <a
+          class="btn btn-lime"
+          href="https://godotengine.org/download"
+          target="_blank"
+          rel="noopener noreferrer">Download free</a
+        >
+        <a class="btn btn-ghost" href="/resources">Browse Godot resources</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="container love-strip" data-reveal>
+    <p class="mono eyebrow">The short version</p>
+    <h2>Free to download. Free to ship. Free to remix.</h2>
+    <p>
+      Godot is MIT-licensed open source. You can build commercial games, contribute code, and never
+      owe the engine a cut. That is rare. That is worth shouting about.
+    </p>
+  </section>
+
+  <section class="container reasons">
+    <div class="reasons-head">
+      <p class="mono eyebrow" data-reveal>Why we ride for Godot</p>
+      <h2 data-reveal>Six reasons it belongs in every free game-dev stack</h2>
+    </div>
+    <div class="reasons-grid">
+      {
+        reasons.map((reason, i) => (
+          <article class="reason" data-reveal style={`transition-delay: ${i * 60}ms`}>
+            <span class="mono reason-num">{String(i + 1).padStart(2, "0")}</span>
+            <h3>{reason.title}</h3>
+            <p>{reason.body}</p>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="quote-band">
+    <div class="container" data-reveal>
+      <p class="mono eyebrow">Not affiliated</p>
+      <blockquote>
+        AIGameDevHub is a fan-built shelf for free tools. We’re not the Godot Foundation — we’re
+        just loud about an engine that gives more than it takes.
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="container jump">
+    <div class="jump-head">
+      <p class="mono eyebrow" data-reveal>Start somewhere</p>
+      <h2 data-reveal>Official links + hub lanes</h2>
+    </div>
+    <div class="jump-grid">
+      {
+        links.map((link, i) => (
+          <a
+            class="jump-card"
+            href={link.href}
+            data-reveal
+            style={`transition-delay: ${i * 50}ms`}
+            target={link.external ? "_blank" : undefined}
+            rel={link.external ? "noopener noreferrer" : undefined}
+          >
+            <span class="tag mono tag-lime">{link.meta}</span>
+            <h3>{link.label}</h3>
+            <span class="mono portal-go">{link.external ? "Open →" : "Enter →"}</span>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="godot-finale">
+    <div class="container" data-reveal>
+      <p class="mono eyebrow">Call to action</p>
+      <h2>Install it. Make something weird.</h2>
+      <p>Then come back for free AI tools, animation packs, shaders, and hub drops that play nice with Godot.</p>
+      <div class="hero-ctas">
+        <a
+          class="btn btn-lime"
+          href="https://godotengine.org/"
+          target="_blank"
+          rel="noopener noreferrer">godotengine.org</a
+        >
+        <a class="btn btn-coral" href="/coding">Pair it with coding tools</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .godot-hero {
+    position: relative;
+    min-height: 88svh;
+    display: grid;
+    align-items: end;
+    overflow: clip;
+  }
+
+  .godot-hero-stage {
+    position: absolute;
+    inset: 0;
+  }
+
+  .godot-hero-veil {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(100deg, rgba(6, 7, 12, 0.94) 0%, rgba(6, 7, 12, 0.5) 50%, rgba(6, 7, 12, 0.2) 100%),
+      linear-gradient(180deg, transparent 30%, rgba(6, 7, 12, 0.95) 100%);
+    pointer-events: none;
+  }
+
+  .godot-hero-copy {
+    position: relative;
+    z-index: 1;
+    padding: calc(var(--nav-h) + 3rem) 0 4rem;
+    max-width: min(100% - 2rem, 760px);
+    margin-left: max(1rem, calc((100% - var(--max)) / 2));
+  }
+
+  .godot-hero-copy h1 {
+    margin: 0;
+    font-size: clamp(3rem, 9vw, 5.8rem);
+    line-height: 0.92;
+    letter-spacing: -0.055em;
+    font-weight: 800;
+  }
+
+  .brand-accent {
+    color: var(--mint);
+  }
+
+  .godot-lead {
+    margin: 1.25rem 0 0;
+    max-width: 38ch;
+    color: var(--steel-bright);
+    font-size: clamp(1.05rem, 2vw, 1.25rem);
+  }
+
+  .hero-ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.75rem;
+  }
+
+  .hero-anim {
+    animation: brand-in 0.85s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  .love-strip {
+    padding: 3.5rem 0 2rem;
+    border-top: 1px solid var(--line);
+  }
+
+  .love-strip h2 {
+    margin: 0;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    letter-spacing: -0.045em;
+    line-height: 0.98;
+    max-width: 18ch;
+  }
+
+  .love-strip > p:last-child {
+    margin: 1rem 0 0;
+    max-width: 52ch;
+    color: var(--steel-bright);
+    font-size: 1.08rem;
+  }
+
+  .reasons {
+    padding: 2rem 0 4rem;
+  }
+
+  .reasons-head h2 {
+    margin: 0;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    letter-spacing: -0.04em;
+    max-width: 20ch;
+  }
+
+  .reasons-grid {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1.75rem;
+  }
+
+  @media (min-width: 720px) {
+    .reasons-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1100px) {
+    .reasons-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .reason {
+    padding: 1.35rem 1.2rem;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: rgba(15, 20, 28, 0.55);
+    min-height: 100%;
+  }
+
+  .reason-num {
+    color: var(--mint);
+  }
+
+  .reason h3 {
+    margin: 0.55rem 0 0;
+    font-size: 1.35rem;
+    letter-spacing: -0.03em;
+  }
+
+  .reason p {
+    margin: 0.55rem 0 0;
+    color: var(--steel-bright);
+  }
+
+  .quote-band {
+    border-block: 1px solid var(--line);
+    background: rgba(15, 20, 28, 0.65);
+    padding: 3rem 0;
+  }
+
+  .quote-band blockquote {
+    margin: 0;
+    font-size: clamp(1.35rem, 3vw, 2rem);
+    letter-spacing: -0.035em;
+    line-height: 1.25;
+    max-width: 28ch;
+    color: var(--white);
+  }
+
+  .jump {
+    padding: 4rem 0;
+  }
+
+  .jump-head h2 {
+    margin: 0;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    letter-spacing: -0.04em;
+  }
+
+  .jump-grid {
+    display: grid;
+    gap: 0.85rem;
+    margin-top: 1.5rem;
+  }
+
+  @media (min-width: 720px) {
+    .jump-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .jump-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .jump-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    padding: 1.25rem;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: rgba(15, 20, 28, 0.45);
+    transition: border-color 0.25s ease, transform 0.25s ease;
+  }
+
+  .jump-card:hover {
+    border-color: rgba(93, 255, 177, 0.45);
+    transform: translateY(-3px);
+  }
+
+  .jump-card h3 {
+    margin: 0;
+    font-size: 1.35rem;
+    letter-spacing: -0.03em;
+  }
+
+  .portal-go {
+    color: var(--mint);
+    margin-top: auto;
+  }
+
+  .godot-finale {
+    border-top: 1px solid var(--line);
+    padding: 4.5rem 0 5rem;
+    text-align: center;
+    background:
+      radial-gradient(600px 280px at 50% 0%, rgba(93, 255, 177, 0.12), transparent 60%);
+  }
+
+  .godot-finale h2 {
+    margin: 0;
+    font-size: clamp(2.2rem, 6vw, 3.8rem);
+    letter-spacing: -0.05em;
+    line-height: 0.95;
+  }
+
+  .godot-finale p {
+    margin: 1rem auto 0;
+    max-width: 40ch;
+    color: var(--steel-bright);
+  }
+
+  .godot-finale .hero-ctas {
+    justify-content: center;
+  }
+
+  @media (max-width: 720px) {
+    .godot-hero-copy {
+      margin-left: 1rem;
+    }
+  }
+</style>

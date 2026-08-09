@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <rect width="800" height="600" fill="#06070c"/>
+  <circle cx="400" cy="300" r="120" stroke="#5dffb1" stroke-width="10"/>
+  <circle cx="400" cy="300" r="55" fill="#ff6b2c"/>
+  <path d="M280 180 L400 300 L520 180" stroke="#7ec8ff" stroke-width="6"/>
+  <text x="40" y="70" fill="#d5deea" font-family="monospace" font-size="22">OLLAMA · LOCAL LLM</text>
+</svg>

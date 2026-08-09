@@ -1,7 +1,10 @@
-# Static site only — no Workers adapter needed.
+# Static site + Reddit feed proxy
 name = "aigamedevhub"
 compatibility_date = "2026-08-08"
+main = "worker.js"
 
 [assets]
 directory = "./dist"
+binding = "ASSETS"
 not_found_handling = "404-page"
+run_worker_first = ["/api/*"]
