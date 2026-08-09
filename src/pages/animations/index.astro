@@ -1,0 +1,46 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import FilterBar from "../../components/FilterBar.astro";
+import MediaTile from "../../components/MediaTile.astro";
+import animations from "../../data/animations.json";
+import type { AnimationResource } from "../../data/types";
+
+const items = animations as AnimationResource[];
+const categories = [...new Set(items.map((r) => r.category))].sort();
+---
+
+<BaseLayout
+  title="Animation"
+  description="Free animation tools and packs for Godot and game dev — Mixamo, Blender, Cascadeur, and more."
+>
+  <section class="container page-head">
+    <p class="mono eyebrow" data-reveal>External · Always free</p>
+    <h1 data-reveal>Animation tools & motion</h1>
+    <p data-reveal>
+      Free rigs, mocap, and clips for Godot and game dev — Mixamo, Blender, Cascadeur, and community
+      packs. Check each author’s license before you ship.
+    </p>
+  </section>
+
+  <section class="container" style="padding-bottom: 4rem">
+    <FilterBar categories={categories} target="#animation-grid" />
+    <div class="media-grid" id="animation-grid">
+      {
+        items.map((item, i) => (
+          <div data-category={[item.category, ...item.tags].join(",")}>
+            <MediaTile
+              href={`/animations/${item.id}`}
+              title={item.title}
+              summary={item.summary}
+              preview={item.preview}
+              tags={[item.godotVersion, item.license]}
+              badge="Free"
+              badgeTone="coral"
+              delay={i * 70}
+            />
+          </div>
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>

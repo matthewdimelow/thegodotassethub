@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <rect width="800" height="600" fill="#0d1016"/>
+  <rect x="220" y="200" width="80" height="160" rx="12" fill="#c8f542"/>
+  <rect x="360" y="170" width="80" height="190" rx="12" fill="#ff5a3c"/>
+  <rect x="500" y="220" width="80" height="140" rx="12" fill="#8b93a7"/>
+  <text x="40" y="70" fill="#c8cedd" font-family="monospace" font-size="22">KENNEY · CC0 ANIM</text>
+</svg>

@@ -1,0 +1,98 @@
+[
+  {
+    "id": "mixamo",
+    "title": "Mixamo",
+    "author": "Adobe",
+    "url": "https://www.mixamo.com/",
+    "category": "Motion Capture",
+    "tags": ["3d", "rigging", "characters", "fbx"],
+    "license": "Adobe Mixamo terms (free with account)",
+    "godotVersion": "Any (import FBX/glTF)",
+    "summary": "Huge free library of auto-rigged characters and mocap clips. Download FBX, convert/import into Godot for prototyping fast.",
+    "preview": "/previews/anim-mixamo.svg"
+  },
+  {
+    "id": "accurig",
+    "title": "AccuRIG",
+    "author": "Reallusion",
+    "url": "https://actorcore.reallusion.com/auto-rig",
+    "category": "Rigging",
+    "tags": ["3d", "rigging", "characters", "free"],
+    "license": "Free AccuRIG terms",
+    "godotVersion": "Any (export then import)",
+    "summary": "Free auto-rigging tool for humanoid meshes — get a usable skeleton without a full DCC pipeline.",
+    "preview": "/previews/anim-accurig.svg"
+  },
+  {
+    "id": "cascadeur",
+    "title": "Cascadeur (Free)",
+    "author": "Nekki",
+    "url": "https://cascadeur.com/",
+    "category": "Animation Tools",
+    "tags": ["3d", "keyframes", "physics", "indie"],
+    "license": "Cascadeur Free plan",
+    "godotVersion": "Any (export FBX/Collada)",
+    "summary": "Physics-assisted keyframe animation. The free plan is solid for indie Godot characters and cinematic posing.",
+    "preview": "/previews/anim-cascadeur.svg"
+  },
+  {
+    "id": "blender",
+    "title": "Blender",
+    "author": "Blender Foundation",
+    "url": "https://www.blender.org/",
+    "category": "Animation Tools",
+    "tags": ["3d", "2d", "rigging", "open-source"],
+    "license": "GPL (Blender) · your files are yours",
+    "godotVersion": "Any (glTF recommended)",
+    "summary": "The free full-stack DCC for rigs, keyframes, Grease Pencil 2D, and glTF export straight into Godot.",
+    "preview": "/previews/anim-blender.svg"
+  },
+  {
+    "id": "godot-anim-docs",
+    "title": "Godot Animation Docs",
+    "author": "Godot Engine",
+    "url": "https://docs.godotengine.org/en/stable/tutorials/animation/index.html",
+    "category": "Godot Built-in",
+    "tags": ["godot", "animationplayer", "animationtree", "official"],
+    "license": "CC-BY 3.0 (docs)",
+    "godotVersion": "4.x",
+    "summary": "Official tutorials for AnimationPlayer, AnimationTree, cutouts, and importing animated scenes.",
+    "preview": "/previews/anim-godot.svg"
+  },
+  {
+    "id": "opengameart-anim",
+    "title": "OpenGameArt — Animations",
+    "author": "OpenGameArt Community",
+    "url": "https://opengameart.org/art-search-advanced?keys=&field_art_type_tid%5B%5D=9&sort_by=count&sort_order=DESC",
+    "category": "2D / 3D Packs",
+    "tags": ["sprites", "2d", "3d", "community"],
+    "license": "Various free licenses",
+    "godotVersion": "Any",
+    "summary": "Filterable free animated sprites and 3D clips. Always double-check the license on each pack.",
+    "preview": "/previews/anim-oga.svg"
+  },
+  {
+    "id": "kenney-animated",
+    "title": "Kenney Animated Assets",
+    "author": "Kenney",
+    "url": "https://kenney.nl/assets?q=animated",
+    "category": "2D / 3D Packs",
+    "tags": ["2d", "3d", "cc0", "characters"],
+    "license": "CC0",
+    "godotVersion": "Any",
+    "summary": "CC0 animated packs from Kenney — drop into Godot with zero licensing stress.",
+    "preview": "/previews/anim-kenney.svg"
+  },
+  {
+    "id": "quaternius-animated",
+    "title": "Quaternius Animated Characters",
+    "author": "Quaternius",
+    "url": "https://quaternius.com/",
+    "category": "2D / 3D Packs",
+    "tags": ["3d", "characters", "cc0"],
+    "license": "CC0",
+    "godotVersion": "Any",
+    "summary": "Stylized free 3D characters — many include idle/walk/run clips ready for Godot prototypes.",
+    "preview": "/previews/anim-quaternius.svg"
+  }
+]

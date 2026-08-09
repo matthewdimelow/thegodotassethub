@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <rect width="800" height="600" fill="#0d1016"/>
+  <path d="M180 420 C260 200, 540 200, 620 420" stroke="#c8f542" stroke-width="8" fill="none"/>
+  <circle cx="220" cy="380" r="14" fill="#ff5a3c"/>
+  <circle cx="320" cy="260" r="14" fill="#ff5a3c"/>
+  <circle cx="480" cy="260" r="14" fill="#ff5a3c"/>
+  <circle cx="580" cy="380" r="14" fill="#ff5a3c"/>
+  <text x="40" y="70" fill="#c8cedd" font-family="monospace" font-size="22">CASCADEUR · FREE</text>
+</svg>

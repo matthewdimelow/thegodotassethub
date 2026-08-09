@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <rect width="800" height="600" fill="#10131a"/>
+  <rect x="160" y="180" width="90" height="90" fill="#c8f542"/>
+  <rect x="270" y="180" width="90" height="90" fill="#ff5a3c"/>
+  <rect x="380" y="180" width="90" height="90" fill="#c8f542"/>
+  <rect x="490" y="180" width="90" height="90" fill="#ff5a3c"/>
+  <rect x="160" y="290" width="90" height="90" fill="#8b93a7"/>
+  <rect x="270" y="290" width="90" height="90" fill="#c8f542"/>
+  <rect x="380" y="290" width="90" height="90" fill="#8b93a7"/>
+  <rect x="490" y="290" width="90" height="90" fill="#c8f542"/>
+  <text x="40" y="70" fill="#c8cedd" font-family="monospace" font-size="22">OPENGAMEART · ANIM</text>
+</svg>

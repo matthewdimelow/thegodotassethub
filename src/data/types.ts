@@ -34,3 +34,6 @@ export type ShaderItem = {
   tags: string[];
   snippet?: string;
 };
+
+/** Free external animation tools / packs for Godot & game dev */
+export type AnimationResource = Resource;

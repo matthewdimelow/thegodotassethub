@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <rect width="800" height="600" fill="#0a0b0d"/>
+  <ellipse cx="400" cy="480" rx="120" ry="24" fill="#000" opacity="0.45"/>
+  <rect x="340" y="220" width="120" height="180" rx="16" fill="#8b93a7"/>
+  <rect x="360" y="160" width="80" height="70" rx="14" fill="#c8f542"/>
+  <path d="M300 280 L340 300 M500 280 L460 300" stroke="#ff5a3c" stroke-width="12" stroke-linecap="round"/>
+  <text x="40" y="70" fill="#c8cedd" font-family="monospace" font-size="22">QUATERNIUS · ANIM</text>
+</svg>

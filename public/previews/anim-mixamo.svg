@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <rect width="800" height="600" fill="#0a0b0d"/>
+  <circle cx="400" cy="160" r="42" fill="#c8f542"/>
+  <path d="M400 210 L400 340 M400 250 L320 300 M400 250 L480 300 M400 340 L340 460 M400 340 L460 460" stroke="#ff5a3c" stroke-width="16" stroke-linecap="round"/>
+  <rect x="120" y="480" width="560" height="14" rx="7" fill="#2a3140"/>
+  <rect x="120" y="480" width="280" height="14" rx="7" fill="#c8f542"/>
+  <text x="40" y="70" fill="#c8cedd" font-family="monospace" font-size="22">MIXAMO · FREE MOCAP</text>
+</svg>

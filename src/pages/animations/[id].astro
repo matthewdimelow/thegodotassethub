@@ -1,0 +1,55 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import animations from "../../data/animations.json";
+import type { AnimationResource } from "../../data/types";
+
+export function getStaticPaths() {
+  return (animations as AnimationResource[]).map((item) => ({
+    params: { id: item.id },
+    props: { item },
+  }));
+}
+
+interface Props {
+  item: AnimationResource;
+}
+
+const { item } = Astro.props;
+---
+
+<BaseLayout title={item.title} description={item.summary}>
+  <section class="container page-head" style="padding-bottom: 1rem">
+    <a class="mono" href="/animations" style="color: var(--steel)">← Animation</a>
+  </section>
+
+  <section class="container detail-layout">
+    <div class="detail-panel">
+      {
+        item.preview ? (
+          <img src={item.preview} alt="" />
+        ) : (
+          <div class="preview-fallback">
+            <span>Preview</span>
+          </div>
+        )
+      }
+    </div>
+    <div class="detail-copy">
+      <span class="tag mono tag-coral">Free · External</span>
+      <h1>{item.title}</h1>
+      <p>{item.summary}</p>
+      <div class="media-meta" style="margin-top: 1rem">
+        <span class="tag mono">by {item.author}</span>
+        <span class="tag mono">{item.category}</span>
+        <span class="tag mono">{item.godotVersion}</span>
+        <span class="tag mono">{item.license}</span>
+      </div>
+      <div class="detail-actions">
+        <a class="btn btn-lime" href={item.url} target="_blank" rel="noopener noreferrer">
+          Open free tool
+        </a>
+        <a class="btn btn-ghost" href="/animations">Back to list</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

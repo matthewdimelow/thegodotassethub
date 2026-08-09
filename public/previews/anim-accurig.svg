@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <rect width="800" height="600" fill="#10131a"/>
+  <circle cx="400" cy="150" r="36" stroke="#c8f542" stroke-width="6"/>
+  <circle cx="400" cy="280" r="10" fill="#ff5a3c"/>
+  <circle cx="320" cy="250" r="8" fill="#c8f542"/>
+  <circle cx="480" cy="250" r="8" fill="#c8f542"/>
+  <circle cx="340" cy="420" r="8" fill="#c8f542"/>
+  <circle cx="460" cy="420" r="8" fill="#c8f542"/>
+  <path d="M400 186 L400 280 L320 250 M400 280 L480 250 M400 280 L400 360 L340 420 M400 360 L460 420" stroke="#8b93a7" stroke-width="4"/>
+  <text x="40" y="70" fill="#c8cedd" font-family="monospace" font-size="22">ACCURIG · FREE RIG</text>
+</svg>

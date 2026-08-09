@@ -11,6 +11,8 @@ const featured = (resources as Resource[]).slice(0, 4);
 const drop = (assets as HubAsset[]).find((a) => a.id === "dimeplayer") ?? (assets as HubAsset[])[0];
 const marquee = [
   "DimePlayer",
+  "Mixamo",
+  "Free Animation",
   "Play MP4 in Godot",
   ...featured.map((r) => r.title),
   "Shaders",
@@ -40,8 +42,8 @@ const marquee = [
       </p>
       <div class="hero-ctas hero-anim" style="animation-delay: 360ms">
         <a class="btn btn-lime" href="/resources">Browse free resources</a>
+        <a class="btn btn-ghost" href="/animations">Animation tools</a>
         <a class="btn btn-ghost" href="/shaders">Enter shaders</a>
-        <a class="btn btn-ghost" href="/assets">Our assets</a>
       </div>
       <p class="mono scroll-hint hero-anim" style="animation-delay: 520ms">Scroll to dive in</p>
     </div>
@@ -74,7 +76,7 @@ const marquee = [
   <section class="portals">
     <div class="container portals-head">
       <p class="mono eyebrow" data-reveal>Pick a lane</p>
-      <h2 data-reveal>Three doors. Same energy.</h2>
+      <h2 data-reveal>Four doors. Same free energy.</h2>
     </div>
     <div class="portal-track" data-hscroll>
       <a class="portal" href="/resources" data-reveal>
@@ -85,6 +87,17 @@ const marquee = [
           <span class="tag mono tag-coral">External</span>
           <h3>Resources</h3>
           <p>Free community gold — Kenney, Quaternius, GDQuest, and more.</p>
+          <span class="mono portal-go">Enter →</span>
+        </div>
+      </a>
+      <a class="portal" href="/animations" data-reveal>
+        <div class="portal-stage" aria-hidden="true">
+          <FloatStage client:visible variant="ring" />
+        </div>
+        <div class="portal-copy">
+          <span class="tag mono tag-coral">Always free</span>
+          <h3>Animation</h3>
+          <p>Mixamo, Blender, Cascadeur, AccuRIG — motion tools for Godot.</p>
           <span class="mono portal-go">Enter →</span>
         </div>
       </a>
@@ -101,7 +114,7 @@ const marquee = [
       </a>
       <a class="portal" href="/shaders" data-reveal>
         <div class="portal-stage" aria-hidden="true">
-          <FloatStage client:visible variant="ring" />
+          <FloatStage client:visible variant="shards" />
         </div>
         <div class="portal-copy">
           <span class="tag mono tag-lime">Live code</span>
