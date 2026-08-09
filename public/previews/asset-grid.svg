@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <rect width="800" height="600" fill="#0a0b0d"/>
+  <g stroke="#c8f542" stroke-width="2" opacity="0.7">
+    <path d="M0 500 L400 300 L800 500"/>
+    <path d="M0 420 L400 220 L800 420"/>
+    <path d="M0 340 L400 140 L800 340"/>
+    <path d="M100 600 L400 140 L700 600" stroke="#ff5a3c" opacity="0.8"/>
+    <path d="M250 600 L400 140 L550 600" stroke="#ff5a3c" opacity="0.5"/>
+  </g>
+  <text x="40" y="70" fill="#c8cedd" font-family="monospace" font-size="22">GRID FLOOR</text>
+</svg>

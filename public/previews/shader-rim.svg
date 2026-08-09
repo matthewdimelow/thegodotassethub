@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <rect width="800" height="600" fill="#0d1016"/>
+  <circle cx="400" cy="310" r="150" fill="#171a22"/>
+  <circle cx="400" cy="310" r="150" stroke="#c8f542" stroke-width="18" opacity="0.9"/>
+  <circle cx="400" cy="310" r="150" stroke="#ff5a3c" stroke-width="8" stroke-dasharray="20 18" opacity="0.8"/>
+  <text x="40" y="70" fill="#c8cedd" font-family="monospace" font-size="22">ELECTRIC RIM</text>
+</svg>

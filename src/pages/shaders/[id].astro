@@ -1,0 +1,78 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import shaders from "../../data/shaders.json";
+import type { ShaderItem } from "../../data/types";
+
+export function getStaticPaths() {
+  return (shaders as ShaderItem[]).map((item) => ({
+    params: { id: item.id },
+    props: { item },
+  }));
+}
+
+interface Props {
+  item: ShaderItem;
+}
+
+const { item } = Astro.props;
+---
+
+<BaseLayout title={item.title} description={item.summary}>
+  <section class="container page-head" style="padding-bottom: 1rem">
+    <a class="mono" href="/shaders" style="color: var(--steel)">← Shaders</a>
+  </section>
+
+  <section class="container detail-layout">
+    <div class="detail-panel shader-shimmer">
+      <div class="media-tile-media" style="border:0">
+        <img src={item.preview} alt="" />
+      </div>
+    </div>
+    <div class="detail-copy">
+      <span class="tag mono tag-lime">Shader</span>
+      <h1>{item.title}</h1>
+      <p>{item.summary}</p>
+      <div class="media-meta" style="margin-top: 1rem">
+        <span class="tag mono">{item.godotVersion}</span>
+        {item.tags.map((tag) => <span class="tag mono">{tag}</span>)}
+      </div>
+      {
+        item.snippet && (
+          <pre class="code-block"><code>{item.snippet}</code></pre>
+        )
+      }
+      <div class="detail-actions">
+        {
+          item.downloadUrl ? (
+            <a class="btn btn-lime" href={item.downloadUrl}>
+              Download
+            </a>
+          ) : item.snippet ? (
+            <button class="btn btn-lime" type="button" id="copy-shader">
+              Copy shader
+            </button>
+          ) : null
+        }
+        <a class="btn btn-ghost" href="/shaders">Back to list</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  const btn = document.getElementById("copy-shader");
+  const codeEl = document.querySelector(".code-block code");
+  if (btn instanceof HTMLButtonElement && codeEl) {
+    btn.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(codeEl.textContent ?? "");
+        btn.textContent = "Copied";
+        setTimeout(() => {
+          btn.textContent = "Copy shader";
+        }, 1600);
+      } catch {
+        btn.textContent = "Copy failed";
+      }
+    });
+  }
+</script>

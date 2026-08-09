@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <rect width="800" height="600" fill="#10131a"/>
+  <path d="M160 420 L400 140 L640 420 Z" fill="#c8f542"/>
+  <circle cx="400" cy="330" r="70" fill="#0a0b0d"/>
+  <path d="M360 330 L395 360 L455 285" stroke="#ff5a3c" stroke-width="16" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="40" y="70" fill="#c8cedd" font-family="monospace" font-size="22">GDQUEST FREE</text>
+</svg>

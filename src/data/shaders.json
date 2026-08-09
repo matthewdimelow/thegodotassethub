@@ -1,0 +1,29 @@
+[
+  {
+    "id": "electric-rim",
+    "title": "Electric Rim",
+    "summary": "Chunky rim-light fresnel with a lime/coral energy fringe for stylized meshes.",
+    "preview": "/previews/shader-rim.svg",
+    "godotVersion": "4.3+",
+    "tags": ["3d", "rim", "stylized"],
+    "snippet": "shader_type spatial;\n\nuniform vec4 rim_color : source_color = vec4(0.78, 0.96, 0.26, 1.0);\nuniform float rim_power : hint_range(0.5, 8.0) = 2.5;\n\nvoid fragment() {\n  float rim = pow(1.0 - clamp(dot(NORMAL, VIEW), 0.0, 1.0), rim_power);\n  ALBEDO = vec3(0.05);\n  EMISSION = rim_color.rgb * rim * 2.0;\n}"
+  },
+  {
+    "id": "scanline-wipe",
+    "title": "Scanline Wipe",
+    "summary": "CanvasItem wipe with drifting scanlines — great for UI transitions and boot screens.",
+    "preview": "/previews/shader-scan.svg",
+    "godotVersion": "4.x",
+    "tags": ["2d", "ui", "transition"],
+    "snippet": "shader_type canvas_item;\n\nuniform float progress : hint_range(0.0, 1.0) = 0.35;\nuniform vec4 accent : source_color = vec4(1.0, 0.35, 0.24, 1.0);\n\nvoid fragment() {\n  vec4 tex = texture(TEXTURE, UV);\n  float line = step(0.5, fract(UV.y * 48.0 + TIME * 2.0));\n  float wipe = step(UV.x, progress);\n  COLOR = mix(tex, accent, wipe * line * 0.65);\n}"
+  },
+  {
+    "id": "liquid-metal",
+    "title": "Liquid Metal",
+    "summary": "Slow swirling metallic noise for orbs, pickups, and funky hero materials.",
+    "preview": "/previews/shader-metal.svg",
+    "godotVersion": "4.3+",
+    "tags": ["3d", "noise", "material"],
+    "snippet": "shader_type spatial;\n\nuniform float speed = 0.35;\n\nfloat hash(vec2 p) {\n  return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453);\n}\n\nvoid fragment() {\n  vec2 uv = UV * 3.0 + vec2(TIME * speed);\n  float n = hash(floor(uv)) * 0.55 + hash(uv) * 0.45;\n  ALBEDO = mix(vec3(0.15), vec3(0.85, 0.9, 1.0), n);\n  METALLIC = 1.0;\n  ROUGHNESS = 0.25;\n}"
+  }
+]

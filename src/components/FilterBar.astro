@@ -1,0 +1,55 @@
+---
+interface Props {
+  categories: string[];
+  target: string;
+}
+
+const { categories, target } = Astro.props;
+---
+
+<div class="filter-bar" data-filter-bar data-target={target}>
+  <button class="filter-chip mono" type="button" data-filter="all" aria-pressed="true">
+    All
+  </button>
+  {
+    categories.map((category) => (
+      <button class="filter-chip mono" type="button" data-filter={category} aria-pressed="false">
+        {category}
+      </button>
+    ))
+  }
+</div>
+
+<script>
+  function initFilters() {
+    document.querySelectorAll<HTMLElement>("[data-filter-bar]").forEach((bar) => {
+      if (bar.dataset.ready === "1") return;
+      bar.dataset.ready = "1";
+
+      const targetSelector = bar.dataset.target;
+      if (!targetSelector) return;
+      const root = document.querySelector(targetSelector);
+      if (!root) return;
+
+      const chips = Array.from(bar.querySelectorAll<HTMLButtonElement>("[data-filter]"));
+      const items = Array.from(root.querySelectorAll<HTMLElement>("[data-category]"));
+
+      chips.forEach((chip) => {
+        chip.addEventListener("click", () => {
+          const value = chip.dataset.filter ?? "all";
+          chips.forEach((c) => c.setAttribute("aria-pressed", String(c === chip)));
+          items.forEach((item) => {
+            const cats = (item.dataset.category ?? "")
+              .split(",")
+              .map((s) => s.trim().toLowerCase());
+            const show = value === "all" || cats.includes(value.toLowerCase());
+            item.hidden = !show;
+          });
+        });
+      });
+    });
+  }
+
+  initFilters();
+  document.addEventListener("astro:page-load", initFilters);
+</script>

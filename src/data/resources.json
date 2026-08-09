@@ -1,0 +1,74 @@
+[
+  {
+    "id": "godot-shaders",
+    "title": "Godot Shaders",
+    "author": "Godot Shaders Community",
+    "url": "https://godotshaders.com/",
+    "category": "Shaders",
+    "tags": ["shaders", "visuals", "2d", "3d"],
+    "license": "Varies by author",
+    "godotVersion": "3.x / 4.x",
+    "summary": "Huge community gallery of free Godot shaders with copy-paste code and previews.",
+    "preview": "/previews/resource-shaders.svg"
+  },
+  {
+    "id": "kenney-assets",
+    "title": "Kenney Game Assets",
+    "author": "Kenney",
+    "url": "https://kenney.nl/assets",
+    "category": "2D / 3D",
+    "tags": ["sprites", "3d", "ui", "audio"],
+    "license": "CC0",
+    "godotVersion": "Any",
+    "summary": "Legendary free packs — sprites, 3D models, UI, audio. Perfect starter kits.",
+    "preview": "/previews/kenney.png"
+  },
+  {
+    "id": "godot-asset-library",
+    "title": "Godot Asset Library",
+    "author": "Godot Engine",
+    "url": "https://godotengine.org/asset-library/asset",
+    "category": "Plugins",
+    "tags": ["official", "plugins", "tools"],
+    "license": "Varies by author",
+    "godotVersion": "3.x / 4.x",
+    "summary": "Official browser for addons, templates, demos, and tools installable from the editor.",
+    "preview": "/previews/resource-library.svg"
+  },
+  {
+    "id": "gdquest-free",
+    "title": "GDQuest Free Resources",
+    "author": "GDQuest",
+    "url": "https://www.gdquest.com/library/",
+    "category": "Learning",
+    "tags": ["tutorials", "open-source", "2d"],
+    "license": "MIT / CC-BY",
+    "godotVersion": "4.x",
+    "summary": "Free open-source Godot demos, courses, and learning tools from GDQuest.",
+    "preview": "/previews/gdquest.jpg"
+  },
+  {
+    "id": "quaternius",
+    "title": "Quaternius Free 3D Models",
+    "author": "Quaternius",
+    "url": "https://quaternius.com/",
+    "category": "3D",
+    "tags": ["3d", "characters", "environments"],
+    "license": "CC0",
+    "godotVersion": "Any",
+    "summary": "Stylized free 3D characters, creatures, and environments — drop-in friendly.",
+    "preview": "/previews/quaternius.jpg"
+  },
+  {
+    "id": "opengameart",
+    "title": "OpenGameArt",
+    "author": "OpenGameArt Community",
+    "url": "https://opengameart.org/",
+    "category": "Media",
+    "tags": ["art", "audio", "sprites"],
+    "license": "Various free licenses",
+    "godotVersion": "Any",
+    "summary": "Long-running free game art and audio hub. Filter carefully by license.",
+    "preview": "/previews/resource-oga.svg"
+  }
+]

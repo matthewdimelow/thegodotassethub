@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <rect width="800" height="600" fill="#0d1016"/>
+  <rect x="120" y="140" width="560" height="340" rx="24" stroke="#c8f542" stroke-width="4" fill="#171a22"/>
+  <circle cx="250" cy="290" r="48" fill="#ff5a3c"/>
+  <rect x="340" y="250" width="260" height="24" rx="6" fill="#c8cedd"/>
+  <rect x="340" y="300" width="200" height="16" rx="6" fill="#8b93a7"/>
+  <rect x="340" y="340" width="240" height="16" rx="6" fill="#8b93a7"/>
+  <text x="40" y="70" fill="#c8cedd" font-family="monospace" font-size="22">ASSET LIBRARY</text>
+</svg>

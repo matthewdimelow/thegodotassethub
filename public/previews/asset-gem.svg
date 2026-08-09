@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e7ff8a"/>
+      <stop offset="100%" stop-color="#6f9a12"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="#10131a"/>
+  <ellipse cx="400" cy="470" rx="120" ry="28" fill="#000" opacity="0.45"/>
+  <polygon points="400,140 520,280 400,470 280,280" fill="url(#g)"/>
+  <polygon points="400,140 520,280 400,250" fill="#fff" opacity="0.25"/>
+  <circle cx="400" cy="290" r="18" fill="#ff5a3c" opacity="0.85"/>
+  <text x="40" y="70" fill="#c8cedd" font-family="monospace" font-size="22">PULSE GEM</text>
+</svg>

@@ -1,0 +1,64 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import assets from "../../data/assets.json";
+import type { HubAsset } from "../../data/types";
+
+export function getStaticPaths() {
+  return (assets as HubAsset[]).map((item) => ({
+    params: { id: item.id },
+    props: { item },
+  }));
+}
+
+interface Props {
+  item: HubAsset;
+}
+
+const { item } = Astro.props;
+const canDownload = Boolean(item.downloadUrl) && item.status === "available";
+const externalDownload = Boolean(item.downloadUrl?.startsWith("http"));
+---
+
+<BaseLayout title={item.title} description={item.summary}>
+  <section class="container page-head" style="padding-bottom: 1rem">
+    <a class="mono" href="/assets" style="color: var(--steel)">← Assets</a>
+  </section>
+
+  <section class="container detail-layout">
+    <div class="detail-panel">
+      <img src={item.preview} alt="" />
+    </div>
+    <div class="detail-copy">
+      <span class="tag mono tag-lime">Ours</span>
+      {
+        item.status === "available" && (
+          <span class="tag mono tag-coral" style="margin-left: 0.35rem">New</span>
+        )
+      }
+      <h1>{item.title}</h1>
+      <p>{item.summary}</p>
+      <div class="media-meta" style="margin-top: 1rem">
+        <span class="tag mono">{item.godotVersion}</span>
+        <span class="tag mono">{item.status}</span>
+        {item.tags.map((tag) => <span class="tag mono">{tag}</span>)}
+      </div>
+      <div class="detail-actions">
+        {
+          canDownload ? (
+            <a
+              class="btn btn-lime"
+              href={item.downloadUrl}
+              target={externalDownload ? "_blank" : undefined}
+              rel={externalDownload ? "noopener noreferrer" : undefined}
+            >
+              {externalDownload ? "Get on itch.io" : "Download"}
+            </a>
+          ) : (
+            <span class="btn btn-ghost" aria-disabled="true">Coming soon</span>
+          )
+        }
+        <a class="btn btn-ghost" href="/assets">Back to list</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

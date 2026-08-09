@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <defs>
+    <radialGradient id="m" cx="40%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#f4f6fb"/>
+      <stop offset="45%" stop-color="#8b93a7"/>
+      <stop offset="100%" stop-color="#1a1d26"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="#0a0b0d"/>
+  <circle cx="400" cy="310" r="170" fill="url(#m)"/>
+  <path d="M260 250 C340 180, 460 180, 540 260" stroke="#c8f542" stroke-width="10" fill="none" opacity="0.55"/>
+  <path d="M270 360 C360 430, 470 410, 540 340" stroke="#ff5a3c" stroke-width="8" fill="none" opacity="0.5"/>
+  <text x="40" y="70" fill="#c8cedd" font-family="monospace" font-size="22">LIQUID METAL</text>
+</svg>

@@ -1,0 +1,46 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import FilterBar from "../../components/FilterBar.astro";
+import MediaTile from "../../components/MediaTile.astro";
+import resources from "../../data/resources.json";
+import type { Resource } from "../../data/types";
+
+const items = resources as Resource[];
+const categories = [...new Set(items.map((r) => r.category))].sort();
+---
+
+<BaseLayout
+  title="Resources"
+  description="Curated free Godot resources from the community — shaders, assets, tools, and more."
+>
+  <section class="container page-head">
+    <p class="mono eyebrow" data-reveal>External · Free</p>
+    <h1 data-reveal>Free resources from others</h1>
+    <p data-reveal>
+      Hand-picked outbound links to solid free Godot stuff. Always check the author’s license
+      before you ship.
+    </p>
+  </section>
+
+  <section class="container" style="padding-bottom: 4rem">
+    <FilterBar categories={categories} target="#resource-grid" />
+    <div class="media-grid" id="resource-grid">
+      {
+        items.map((item, i) => (
+          <div data-category={[item.category, ...item.tags].join(",")}>
+            <MediaTile
+              href={`/resources/${item.id}`}
+              title={item.title}
+              summary={item.summary}
+              preview={item.preview}
+              tags={[item.godotVersion, item.license]}
+              badge="External"
+              badgeTone="coral"
+              delay={i * 70}
+            />
+          </div>
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>

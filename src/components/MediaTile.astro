@@ -1,0 +1,67 @@
+---
+interface Props {
+  href: string;
+  title: string;
+  summary: string;
+  preview?: string;
+  tags?: string[];
+  badge?: string;
+  badgeTone?: "lime" | "coral";
+  shimmer?: boolean;
+  delay?: number;
+  external?: boolean;
+}
+
+const {
+  href,
+  title,
+  summary,
+  preview,
+  tags = [],
+  badge,
+  badgeTone = "lime",
+  shimmer = false,
+  delay = 0,
+  external = false,
+} = Astro.props;
+---
+
+<a
+  class:list={["media-tile", { "shader-shimmer": shimmer }]}
+  href={href}
+  style={`animation-delay: ${delay}ms`}
+  target={external ? "_blank" : undefined}
+  rel={external ? "noopener noreferrer" : undefined}
+>
+  <div class="media-tile-media">
+    {
+      preview ? (
+        <img src={preview} alt="" loading="lazy" />
+      ) : (
+        <div class="preview-fallback" aria-hidden="true">
+          <span>3D preview</span>
+        </div>
+      )
+    }
+  </div>
+  <div class="media-tile-body">
+    {
+      badge && (
+        <span class:list={["tag", "mono", badgeTone === "coral" ? "tag-coral" : "tag-lime"]}>
+          {badge}
+        </span>
+      )
+    }
+    <h3>{title}</h3>
+    <p>{summary}</p>
+    {
+      tags.length > 0 && (
+        <div class="media-meta">
+          {tags.slice(0, 3).map((tag) => (
+            <span class="tag mono">{tag}</span>
+          ))}
+        </div>
+      )
+    }
+  </div>
+</a>

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "dimeplayer",
+    "title": "DimePlayer — Play MP4 in Godot",
+    "summary": "Free GDExtension that plugs FFmpeg into Godot so you can play MP4, MKV, WebM, MOV and more — no Theora conversion dance.",
+    "downloadUrl": "https://mdoubledee.itch.io/dimeplayer-actually-play-mp4-in-godot",
+    "preview": "/previews/dimeplayer.png",
+    "godotVersion": "4.3+",
+    "tags": ["plugin", "video", "ffmpeg", "windows"],
+    "status": "available"
+  },
+  {
+    "id": "neon-crate",
+    "title": "Neon Crate Pack",
+    "summary": "A tiny stylized crate set with emissive edges — made for quick prototypes and hub demos.",
+    "downloadUrl": "",
+    "preview": "/previews/asset-crate.svg",
+    "godotVersion": "4.3+",
+    "tags": ["3d", "props", "starter"],
+    "status": "coming-soon"
+  },
+  {
+    "id": "pulse-gem",
+    "title": "Pulse Gem",
+    "summary": "Low-poly collectible gem with a soft pulse material setup for Godot 4.",
+    "downloadUrl": "",
+    "preview": "/previews/asset-gem.svg",
+    "godotVersion": "4.3+",
+    "tags": ["3d", "collectible", "vfx"],
+    "status": "coming-soon"
+  },
+  {
+    "id": "grid-floor",
+    "title": "Infinite Grid Floor",
+    "summary": "Simple modular floor tiles with a funky grid albedo — perfect for showcase scenes.",
+    "downloadUrl": "",
+    "preview": "/previews/asset-grid.svg",
+    "godotVersion": "4.x",
+    "tags": ["3d", "environment"],
+    "status": "coming-soon"
+  }
+]

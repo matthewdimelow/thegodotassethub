@@ -1,0 +1,24 @@
+<div class="scroll-progress" aria-hidden="true">
+  <div class="scroll-progress-bar"></div>
+</div>
+
+<style>
+  .scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    z-index: 80;
+    pointer-events: none;
+    background: transparent;
+  }
+
+  .scroll-progress-bar {
+    height: 100%;
+    width: calc(var(--scroll, 0) * 100%);
+    background: linear-gradient(90deg, var(--lime), var(--coral));
+    box-shadow: 0 0 18px rgba(200, 245, 66, 0.35);
+    transition: width 0.05s linear;
+  }
+</style>

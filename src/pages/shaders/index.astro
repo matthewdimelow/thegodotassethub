@@ -1,0 +1,46 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import FilterBar from "../../components/FilterBar.astro";
+import MediaTile from "../../components/MediaTile.astro";
+import shaders from "../../data/shaders.json";
+import type { ShaderItem } from "../../data/types";
+
+const items = shaders as ShaderItem[];
+const categories = [...new Set(items.flatMap((s) => s.tags))].sort();
+---
+
+<BaseLayout
+  title="Shaders"
+  description="Funky Godot shader drops with bold previews and copy-ready snippets."
+>
+  <section class="container page-head">
+    <p class="mono eyebrow" data-reveal>Shader area</p>
+    <h1 data-reveal>Shaders with bite</h1>
+    <p data-reveal>
+      Small gallery of stylized materials and canvas effects. Preview loud, paste fast, tweak later.
+    </p>
+  </section>
+
+  <section class="container" style="padding-bottom: 4rem">
+    <FilterBar categories={categories} target="#shader-grid" />
+    <div class="media-grid" id="shader-grid">
+      {
+        items.map((item, i) => (
+          <div data-category={item.tags.join(",")}>
+            <MediaTile
+              href={`/shaders/${item.id}`}
+              title={item.title}
+              summary={item.summary}
+              preview={item.preview}
+              tags={[item.godotVersion, ...item.tags.slice(0, 2)]}
+              badge="Shader"
+              badgeTone="lime"
+              shimmer
+              delay={i * 70}
+            />
+          </div>
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>

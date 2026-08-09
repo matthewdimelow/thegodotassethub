@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#151822"/>
+      <stop offset="100%" stop-color="#0a0b0d"/>
+    </linearGradient>
+    <linearGradient id="wave" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#c8f542"/>
+      <stop offset="50%" stop-color="#ff5a3c"/>
+      <stop offset="100%" stop-color="#c8f542"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <path d="M0 360 C120 280, 200 440, 320 360 S520 280, 640 360 S760 440, 800 360 V600 H0Z" fill="url(#wave)" opacity="0.85"/>
+  <circle cx="560" cy="190" r="90" fill="#c8f542" opacity="0.9"/>
+  <circle cx="560" cy="190" r="54" fill="#0a0b0d"/>
+  <text x="40" y="70" fill="#c8cedd" font-family="monospace" font-size="22">SHADER://FREE</text>
+</svg>

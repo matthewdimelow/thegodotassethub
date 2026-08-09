@@ -1,0 +1,103 @@
+---
+const path = Astro.url.pathname;
+const links = [
+  { href: "/resources", label: "Resources" },
+  { href: "/assets", label: "Assets" },
+  { href: "/shaders", label: "Shaders" },
+  { href: "/about", label: "About" },
+];
+---
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="/" aria-label="TheGodotAssetHub home">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-text">TheGodotAssetHub</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      {
+        links.map((link) => (
+          <a
+            href={link.href}
+            class:list={[{ active: path === link.href || path.startsWith(`${link.href}/`) }]}
+          >
+            {link.label}
+          </a>
+        ))
+      }
+    </nav>
+  </div>
+</header>
+
+<style>
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    height: var(--nav-h);
+    backdrop-filter: blur(16px);
+    background: var(--glass);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .nav-inner {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    font-size: 1.05rem;
+  }
+
+  .brand-mark {
+    width: 0.85rem;
+    height: 0.85rem;
+    border-radius: 3px;
+    background: linear-gradient(135deg, var(--lime), var(--coral));
+    box-shadow: 0 0 0 3px rgba(200, 245, 66, 0.12);
+  }
+
+  .brand-text {
+    max-width: 42vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.35rem 0.9rem;
+  }
+
+  .nav-links a {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--steel);
+    padding: 0.35rem 0;
+    border-bottom: 1px solid transparent;
+  }
+
+  .nav-links a:hover,
+  .nav-links a.active {
+    color: var(--white);
+    border-bottom-color: var(--lime);
+  }
+
+  @media (max-width: 640px) {
+    .nav-links {
+      gap: 0.25rem 0.65rem;
+    }
+  }
+</style>
