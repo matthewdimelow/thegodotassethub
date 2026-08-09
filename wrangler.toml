@@ -1,5 +1,5 @@
 # Static site only — no Workers adapter needed.
-name = "thegodotassethub"
+name = "aigamedevhub"
 compatibility_date = "2026-08-08"
 
 [assets]

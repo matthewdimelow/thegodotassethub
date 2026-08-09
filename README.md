@@ -1,6 +1,6 @@
-# TheGodotAssetHub
+# AIGameDevHub
 
-Funky third-party hub for free Godot resources, our own simple assets, and shaders.
+Funky hub for free AI & game-dev tools — Godot resources, animation, assets, and shaders.
 
 ## Develop
 
@@ -23,7 +23,7 @@ Repo: https://github.com/matthewdimelow/thegodotassethub
 ### Build settings
 
 - **Build command:** `npm run build`
-- **Deploy command:** leave **empty** (do not use `npx wrangler deploy`)
+- **Deploy command:** leave **empty** on Pages, or `npx wrangler deploy` on Workers
 - **Output directory:** `dist`
 - **Node version:** `22` (env var `NODE_VERSION=22`)
 
@@ -34,6 +34,7 @@ This is a static Astro site. You do **not** need the Cloudflare Workers / Astro 
 Edit JSON in `src/data/`:
 
 - `resources.json` — curated external free resources
+- `animations.json` — free animation tools & packs
 - `assets.json` — hub assets
 - `shaders.json` — shader gallery + snippets
 
